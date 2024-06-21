@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check if CFILE environment variable is set
+if [ -z "$CFILE" ]; then
+    echo "Error: CFILE environment variable is not set."
+    exit 1
+fi
+
+# Check if the C file exists
+if [ ! -f "$CFILE" ]; then
+    echo "Error: C file '$CFILE' does not exist."
+    exit 1
+fi
+
+# Extract base name of C file without extension
+BASENAME=$(basename "$CFILE" .c)
+
+# Generate assembly code using gcc with Intel syntax
+gcc -S -masm=intel "$CFILE" -o "$BASENAME.s"
+
+# Check if gcc command was successful
+if [ $? -ne 0 ]; then
+    echo "Error: Compilation failed."
+    exit 1
+fi
+
+echo "Generated assembly code saved in '$BASENAME.s'."
