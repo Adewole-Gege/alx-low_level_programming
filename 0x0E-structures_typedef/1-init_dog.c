@@ -1,20 +1,18 @@
-#include <stddef.h> /* Include this header for NULL definition */
-#include "dog.h"
-
+#include<stddef.h>/*IncludethisheaderforNULLdefinition*/
+#include"dog.h"
 /**
- * init_dog - initializes a variable of type struct dog
- * @d: pointer to the struct dog to initialize
- * @name: name to initialize
- * @age: age to initialize
- * @owner: owner to initialize
- */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+*init_dog-initializesavariableoftypestructdog
+*@d:pointertothestructdogtoinitialize
+*@name:nametoinitialize
+*@age:agetoinitialize
+*@owner:ownertoinitialize
+*/
+voidinit_dog(structdog*d,char*name,floatage,char*owner)
 {
-    if (d != NULL) /* Check if the pointer is not NULL */
-    {
-        d->name = name;
-        d->age = age;
-        d->owner = owner;
-    }
+if(d!=NULL)/*CheckifthepointerisnotNULL*/
+{
+d->name=name;
+d->age=age;
+d->owner=owner;
 }
-
+}
