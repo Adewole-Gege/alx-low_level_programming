@@ -5,7 +5,10 @@ This project contains functions that make use of variadic functions in C.
 ## Files
 
 - `0-sum_them_all.c`: A function that returns the sum of all its parameters.
-- `variadic_functions.h`: Header file containing the function prototype for `sum_them_all`.
+- `1-print_numbers.c`: A function that prints numbers, followed by a new line.
+- `2-print_strings.c`: A function that prints strings, followed by a new line.
+- `3-print_all.c`: A function that prints anything.
+- `variadic_functions.h`: Header file containing the function prototypes.
 
 ## Requirements
 
@@ -15,7 +18,7 @@ This project contains functions that make use of variadic functions in C.
 - Code should use the Betty style (checked using betty-style.pl and betty-doc.pl)
 - No global variables
 - No more than 5 functions per file
-- The only C standard library functions allowed are malloc, free, and exit. Any use of functions like printf, puts, calloc, realloc, etc. is forbidden
+- The only C standard library functions allowed are malloc, free, and exit. Any use of functions like printf, puts, calloc, realloc etc. is forbidden
 - Allowed to use the following macros: va_start, va_arg, and va_end
 - Allowed to use _putchar
 - Do not push _putchar.c
