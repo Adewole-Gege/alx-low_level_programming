@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-unsigned long a = 1, b = 2, next, sum = 2; // Initialize first two Fibonacci numbers and sum of even terms
+unsigned long a = 1, b = 2, next, sum = 2; /* Initialize first two Fibonacci numbers and sum of even terms */
 while (1)
 {
 next = a + b;
