@@ -1,0 +1,30 @@
+NAME = school
+SRC = main.c school.c
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+RM = rm -f
+
+# Rule to build the executable
+all: $(NAME)
+
+$(NAME): $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+
+# Rule to remove temporary files
+clean:
+	$(RM) *~
+
+# Rule to remove object files
+oclean:
+	$(RM) main.o school.o
+
+# Rule to clean everything
+fclean: clean oclean
+	$(RM) $(NAME)
+
+# Rule to force a complete rebuild
+re: fclean all
+
+# The header file
+main.o: m.h
+school.o: m.h
